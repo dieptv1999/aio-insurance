@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: SFProText;
+        font-weight: 500;
+        src: url('/fonts/SFProText-Regular.ttf') format("ttf");
+    }
+    @font-face {
+        font-family: SFProText;
+        font-weight: 600;
+        src: url('/fonts/SFProText-Semibold.ttf') format("ttf");
+    }
+}
+
+.header-bg {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(14.7);
+    -webkit-backdrop-filter: blur(14.7);
+}
+
+.menu .active {
+    background-color: #EE0033;
+    border-radius: 6px;
+    color: white;
+}
+
+.menu li:active {
+    background-color: #EE0033;
+}

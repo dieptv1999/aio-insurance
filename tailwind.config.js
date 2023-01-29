@@ -6,7 +6,28 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sfprotext: ['SFProText', 'sans-serif'],
+      },
+      transitionProperty: {
+        'height': 'height'
+      },
+      boxShadow: {
+        header: '0px 0px 8px 0px rgb(0, 0, 0, 0.1)',
+      }
+    },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/colors/themes")["[data-theme=light]"],
+          primary: "#EE0033",
+          "primary-focus": "#EE0033",
+        },
+      },
+    ],
+  },
 }
